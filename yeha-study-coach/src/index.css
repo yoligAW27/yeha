@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Light mode default */
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    transition: background-color 300ms, color 300ms;
+  }
+
+  /* Dark mode */
+  .dark body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+  }
+
+  /* All text elements - Light mode */
+  h1, h2, h3, h4, h5, h6, p, span, div, label, input, select, textarea {
+    color: #0f172a;
+  }
+
+  /* All text elements - Dark mode */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+  .dark p, .dark span, .dark div, .dark label, .dark input, 
+  .dark select, .dark textarea {
+    color: #e2e8f0;
+  }
+
+  /* Inputs and selects - Light mode */
+  input, select, textarea {
+    background-color: #ffffff;
+    border-color: #e2e8f0;
+  }
+
+  /* Inputs and selects - Dark mode */
+  .dark input, .dark select, .dark textarea {
+    background-color: #1e293b;
+    border-color: #475569;
+  }
+
+  /* Placeholder text - Light mode */
+  input::placeholder, textarea::placeholder, select::placeholder {
+    color: #94a3b8;
+  }
+
+  /* Placeholder text - Dark mode */
+  .dark input::placeholder, .dark textarea::placeholder, .dark select::placeholder {
+    color: #64748b;
+  }
+}
+
+@layer components {
+  .container-custom {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Card styles */
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .dark .card {
+    background-color: #1e293b;
+    border-color: #334155;
+  }
+
+  /* Text colors */
+  .text-default {
+    color: #0f172a;
+  }
+
+  .dark .text-default {
+    color: #e2e8f0;
+  }
+
+  .text-muted {
+    color: #64748b;
+  }
+
+  .dark .text-muted {
+    color: #94a3b8;
+  }
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
